@@ -1,0 +1,23 @@
+
+Instructions for Coil generation scripts:
+
+Both the scripts rx_coil.py and tx_coil.py generate other scripts that can be run
+inside the Altium environment (x.pas).
+Those scripts contain instructions to add specific traces and vias inside a 
+PCB-EDITOR environment (they do not work inside the footprint creation environment).
+
+To create the coils follow these steps
+	-	Configure the parameters of the "x_coil.py" script
+	- 	Run the "x_coil.py" script
+	-	Create a scripting project inside Altium
+	- 	Add the "x.pas" script to the project
+	-	Open the .PcbDoc where you want the coil
+	-	Run the "x.pas" script in Altium
+	
+Note:
+	The "rx_coil.py" script only creates 1 coil.
+	To get both the sin and cos coils you have to run the procedure above 2 times
+	modifying parameter "coil_ph_deg" of the script.
+	
+To put the coils in a footprint, you can use a dummy .PcbDoc and just Copy-Paste 
+the traces inside the footprint environment.
